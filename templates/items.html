@@ -1,0 +1,22 @@
+<div>
+  <ol class="breadcrumb">
+    <li><a ui-sref="home">Home</a></li>
+    <li><a ui-sref="categories">Categories</a></li>
+    <li class="active">{{ $ctrl.category }}</li>
+  </ol>
+
+  <div class="table-responsive">
+    <table class="table table-condensed table-striped">
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Large Price</th>
+      </tr>
+      <tr data-ng-repeat="item in $ctrl.items">
+        <td>{{ item.name }}</td>
+        <td>{{ item.description }}</td>
+        <td>{{ item.price_large | currency }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
